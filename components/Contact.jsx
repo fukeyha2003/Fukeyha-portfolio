@@ -9,38 +9,33 @@ export default function Contact() {
 
   const handleChange = (e) => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setStatus('sending')
+const handleSubmit = async (e) => {
+  e.preventDefault()
+  setStatus('sending')
 
-    // Using EmailJS — replace SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY with yours from emailjs.com
-    // Free tier: 200 emails/month. Sign up at https://www.emailjs.com
-    try {
-      const res = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          service_id: 'YOUR_SERVICE_ID',      // 🔧 Replace with your EmailJS service ID
-          template_id: 'YOUR_TEMPLATE_ID',    // 🔧 Replace with your EmailJS template ID
-          user_id: 'YOUR_PUBLIC_KEY',         // 🔧 Replace with your EmailJS public key
-          template_params: {
-            from_name: form.name,
-            from_email: form.email,
-            message: form.message,
-            to_email: 'fukeharizwan2003@gmail.com',
-          },
-        }),
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(form),
+    })
+
+    if (res.ok) {
+      setStatus('sent')
+      setForm({
+        name: '',
+        email: '',
+        message: '',
       })
-      if (res.ok) {
-        setStatus('sent')
-        setForm({ name: '', email: '', message: '' })
-      } else {
-        setStatus('error')
-      }
-    } catch {
+    } else {
       setStatus('error')
     }
+  } catch {
+    setStatus('error')
   }
+}
 
   const inputStyle = {
     width: '100%', padding: '0.85rem 1rem',
@@ -174,11 +169,6 @@ export default function Contact() {
               </p>
             )}
 
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', color: 'var(--dim)', lineHeight: 1.6 }}>
-              💡 To enable the contact form, set up a free account at{' '}
-              <a href="https://www.emailjs.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent2)', cursor: 'none' }}>emailjs.com</a>
-              {' '}and replace the 3 IDs in Contact.jsx
-            </p>
           </form>
         </div>
       </div>
