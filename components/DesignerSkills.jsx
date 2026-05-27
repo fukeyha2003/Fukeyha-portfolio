@@ -29,6 +29,15 @@ const designs = [
     image: '/thumbnails/business-promo.png',
     color: '#00ffb2',
   },
+  {
+  num: '04',
+  title: 'Tech Startup Hiring Campaign',
+  category: 'Startup & Recruitment Design',
+  desc: 'Modern hiring campaign creative designed for tech startups with strong typography, futuristic visuals, and social-media-focused branding.',
+  tools: ['Canva', 'Branding', 'Social Media'],
+  image: '/thumbnails/startup-hiring.png',
+  color: '#06b6d4',
+},
 ]
 
 function DesignCard({ design, index }) {
