@@ -5,8 +5,9 @@ import Link from 'next/link'
 const links = [
   { href: '#about', label: 'About' },
   { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
   { href: '#designs', label: 'Designs' },
+  { href: '#projects', label: 'Projects' },
+  
   { href: '#contact', label: 'Contact' },
 ]
 
@@ -59,7 +60,7 @@ export default function Navbar() {
       </ul>
 
       {/* Download CV button */}
-      <a
+      {/* <a
         href="/Fukeyha_Rizwan_CV.pdf"
         download
         className="clip-btn"
@@ -76,7 +77,7 @@ export default function Navbar() {
         onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
       >
         Download CV
-      </a>
+      </a> */}
     </nav>
   )
 }

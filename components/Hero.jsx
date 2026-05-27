@@ -110,7 +110,7 @@ export default function Hero() {
           <span style={{ margin: '0 0.6rem', opacity: 0.4 }}>·</span>
           Software Developer
           <span style={{ margin: '0 0.6rem', opacity: 0.4 }}>·</span>
-          AI/ML Engineer
+          Graphic Designer
         </p>
 
         {/* Description */}
@@ -125,9 +125,7 @@ export default function Hero() {
             fontFamily: "'Syne', sans-serif",
           }}
         >
-          Building intelligent systems that bridge machine learning with
-          real world software. Passionate about AI-powered applications,
-          clean code, and creating impact.
+          Blending software engineering, AI, and digital design to build modern, scalable products. Passionate about intelligent systems, clean user experiences, and creating technology that delivers real-world impact.
         </p>
 
         {/* Buttons */}
