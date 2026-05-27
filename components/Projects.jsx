@@ -371,19 +371,6 @@ export default function Projects() {
         }}>
           Selected Work<span style={{ color: '#00ffb2' }}>.</span>
         </h2>
-        <p style={{
-          color: '#7a9aaa', fontSize: '0.85rem',
-          fontFamily: "'Space Mono', monospace",
-        }}>
-          Add your demo recordings to{' '}
-          <code style={{
-            color: '#00ffb2', background: 'rgba(0,255,178,0.08)',
-            padding: '0.1rem 0.4rem', fontSize: '0.8rem',
-          }}>
-            /public/videos/
-          </code>
-          {' '}— click any card to play.
-        </p>
       </div>
 
       {/* 2-column grid */}
