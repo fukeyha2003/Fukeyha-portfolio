@@ -23,6 +23,7 @@ export default function Hero() {
 
   return (
     <section
+       className="hero-section"
       style={{
         minHeight: '100vh',
         display: 'flex',
@@ -58,7 +59,7 @@ export default function Hero() {
       }} />
 
       {/* MAIN CONTENT */}
-      <div style={{ position: 'relative', zIndex: 1, maxWidth: 780, paddingTop: '80px' }}>
+      <div className="hero-content" style={{ position: 'relative', zIndex: 1, maxWidth: 780, paddingTop: '80px' }}>
 
         {/* Tag */}
         <div
@@ -129,7 +130,7 @@ export default function Hero() {
         </p>
 
         {/* Buttons */}
-        <div className="hero-reveal" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+        <div className="hero-reveal hero-buttons" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
           <a
             href="#projects"
             style={{
@@ -191,19 +192,16 @@ export default function Hero() {
       </div>
 
       {/* STAT CARDS */}
-      <div
-  className="hero-reveal"
+    <div
+  className="hero-reveal hero-stats"
   style={{
     position: "absolute",
     right: "5rem",
     top: "40%",
-    transform: "none",
     display: "flex",
     flexDirection: "row",
     gap: "2.25rem",
     zIndex: 1,
-    opacity: 1,
-    transition: "opacity 0.7s, transform 0.7s",
   }}
 >
         {stats.map(s => (
@@ -243,7 +241,7 @@ export default function Hero() {
       </div>
 
       {/* SCROLL INDICATOR */}
-      <div style={{
+      <div  className="scroll-indicator" style={{
         position: 'absolute',
         bottom: '2.5rem',
         left: '50%',

@@ -54,7 +54,7 @@ export default function About() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
-    <section id="about" style={{ background: 'var(--bg2)',padding: '6rem', maxWidth: 1200, margin: '2rem auto' }}>
+    <section id="about" className="responsive-section" style={{ background: 'var(--bg2)',padding: '6rem', maxWidth: 1200, margin: '2rem auto' }}>
       <div
         ref={ref}
         style={{
@@ -76,7 +76,7 @@ export default function About() {
         </h2>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
+      <div className="responsive-grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
         <div>
           {[
             <>I'm a <strong style={{ color: 'var(--text)' }}>Computer Science student at NED University</strong>, graduating in June 2026. I specialize in building full-stack applications with a strong focus on integrating AI and machine learning into real world products.</>,

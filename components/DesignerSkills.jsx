@@ -126,7 +126,7 @@ export default function DesignerSkills() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
-    <section id="designs" style={{ background: 'var(--bg2)', padding: '6rem 4rem' }}>
+    <section id="designs" className="responsive-section" style={{ background: 'var(--bg2)', padding: '6rem 4rem' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div
           ref={ref}
@@ -157,7 +157,7 @@ export default function DesignerSkills() {
           </p>
         </div>
 
-        <div style={{
+        <div className="design-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
           gap: '1.5rem',

@@ -72,7 +72,11 @@ export default function Skills() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
-    <div id="skills" style={{ background: 'var(--bg2)', padding: '6rem' }}>
+   <div
+  id="skills"
+  className="responsive-section"
+  style={{ background: 'var(--bg2)', padding: '6rem' }}
+>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div
           ref={ref}

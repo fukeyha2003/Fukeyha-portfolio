@@ -49,7 +49,7 @@ const handleSubmit = async (e) => {
   }
 
   return (
-    <section id="contact" style={{ padding: '6rem', maxWidth: 1200, margin: '0 auto' }}>
+    <section id="contact" className="responsive-section" style={{ padding: '6rem', maxWidth: 1200, margin: '0 auto' }}>
       <div
         ref={ref}
         style={{
@@ -73,7 +73,7 @@ const handleSubmit = async (e) => {
           I'm graduating June 2026 and open to full-time roles, internships, and interesting collaborations.
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
+        <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
           {/* Contact Info */}
           <div>
             {[
@@ -111,7 +111,7 @@ const handleSubmit = async (e) => {
 
           {/* Contact Form */}
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div className="contact-form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
               <div>
                 <label style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--muted)', letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '0.5rem' }}>Name</label>
                 <input

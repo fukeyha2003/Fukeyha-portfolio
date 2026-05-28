@@ -346,7 +346,7 @@ export default function Projects() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
-    <section id="projects" style={{ padding: '6rem 4rem', maxWidth: 1200, margin: '0 auto' }}>
+    <section id="projects" className="responsive-section" style={{ padding: '6rem 4rem', maxWidth: 1200, margin: '0 auto' }}>
       <div
         ref={ref}
         style={{
@@ -374,7 +374,7 @@ export default function Projects() {
       </div>
 
       {/* 2-column grid */}
-      <div style={{
+      <div className="project-grid" style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
         gap: '1.75rem',
